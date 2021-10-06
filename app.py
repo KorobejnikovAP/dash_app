@@ -60,6 +60,7 @@ app.layout = html.Div([
     ]) 
 ])
 
+#callbacks для графика 
 @app.callback(
     Output('my_graph', 'figure'),
     [Input('my_slider', 'value')])
@@ -71,6 +72,7 @@ def update_figure(selected_year):
     return fig
 
 
+#взаимосвязанные обратные вызовы
 @app.callback(
     Output('cities-radio', 'options'),
     [Input('countries-radio', 'value')])
